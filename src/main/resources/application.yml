@@ -1,0 +1,89 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://127.0.0.1/bootdo?characterEncoding=utf-8&useSSL=false&&serverTimezone=CTT
+  jpa:
+    show-sql: true
+  jackson:
+    default-property-inclusion: non_null
+  redis:
+    host: 127.0.0.1
+    port: 6379
+server:
+  context-path: /sell
+#logging:
+#  pattern:
+#    console: "%d - %msg%n"
+##  path: F://日志
+#  file: F://日志/sell.log
+#  level:
+#    com.imooc.LoggerTest: debug
+
+
+wx:
+  mp:
+    configs:
+      - appId: wxce9fb3b44a9e26fd  #huocheyun
+        secret: 379dfbf58a39f99f683b46a80638ccf0
+        token: tangzhiyu
+        aesKey: aPUYkDlST8WiMfriIQAZicfQVRL2vei6ExDlbPla54U
+
+      - appId: wx5c3753921e0b0dc0    #测试公众号
+        secret: bc310cc2dabc07136a3fcf3e8b3280df
+        token: tangzhiyu
+        aesKey: tangzhiyu
+
+      - appId: wxea5869aa46cd3e22  #广州嘉和
+        secret: 2089f0abb4bbf35e3aded300b3e5d7c0
+        token: gzjhqcfw
+        aesKey: KbON1HuC2NXsurPvogmOHAJ5qp4HaXfcbOr4PmtFS42
+
+
+
+
+
+
+# 下面是微信相关的配置
+wechat:
+#  mpAppId: wxce9fb3b44a9e26fd
+#  mpAppSecret: 379dfbf58a39f99f683b46a80638ccf0 #火车云appId,appSecret
+
+  mpAppId: wx5c3753921e0b0dc0
+  mpAppSecret: bc310cc2dabc07136a3fcf3e8b3280df #火车云测试号appId,appSecret
+
+#  mpAppId: wxea5869aa46cd3e22
+#  mpAppSecret: 2089f0abb4bbf35e3aded300b3e5d7c0 #广州嘉和appId,appSecret
+
+#    openAppId: wxa5b1eca9389268b9
+#   openAppSecret: d29c50a4925922a28d7797ca0866243c #借用帐号appId,appSecret
+
+  mchId: 1483469312
+  mchKey: C5245D70627C1F8E9964D494B0735025
+  keyPath: C:/Users/Administrator/Downloads/h5.p12
+
+  mchIdOne: 1521736381
+  mchKeyOne: xxxx
+  keyPathOne: C:/Users/Administrator/Downloads/h5.p12
+
+  notifyUrl: http://sqmax.natapp1.cc/notify
+  templateId:
+    orderStatus: kxcf4NfS0Qap2DE6dluFsPwW2RJPiAuMpO6BIGHxCU8
+    orderMonthStatus: qIjOsIsu1uvRJ3yLIoUZdqViqrkWF1o828fysxdq4kE
+
+
+
+
+
+
+projectUrl:
+#  微信授权时用的域名，必须与公众平台配置的一致
+#  使用地方/ WechatController ---> authorize
+  wechatMpAuthorize: http://818f9812.ngrok.io
+
+  wechatOpenAuthorize: http://sqmax.natapp1.cc
+
+#   登录成功跳转的前缀
+#  /使用位置 SellerUserController ---> login
+  sell: http://818f9812.ngrok.io
